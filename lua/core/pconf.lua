@@ -57,8 +57,8 @@ require('smartyank').setup {
   -- By default copy is only triggered by "intentional yanks" where the
   -- user initiated a `y` motion (e.g. `yy`, `yiw`, etc). Set to `false`
   -- if you wish to copy indiscriminately:
-  -- validate_yank = false,
-  -- 
+  validate_yank = true,
+  --
   -- For advanced customization set to a lua function returning a boolean
   -- for example, the default condition is:
   -- validate_yank = function() return vim.v.operator == "y" end,
