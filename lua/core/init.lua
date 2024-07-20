@@ -1,0 +1,5 @@
+vim.cmd('source ~/.config/nvim/lua/core/plug-bootstrap.vim')
+require ('core.plug')
+require ('core.set')
+require ('core.pconf')
+require ('core.keymaps')
