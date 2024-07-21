@@ -57,16 +57,14 @@ Plug('glepnir/hlsearch.nvim')
 Plug('godlygeek/tabular')
 
 -- filetree
-Plug('nvim-tree/nvim-web-devicons') -- optional
+Plug('nvim-tree/nvim-web-devicons')
 Plug('nvim-lua/plenary.nvim')
 Plug('MunifTanjim/nui.nvim')
 Plug('nvim-neo-tree/neo-tree.nvim', { ['branch'] = 'v3.x'})
--- Plug('nvim-tree/nvim-tree.lua')
 
 -- status line
 Plug('nvim-lualine/lualine.nvim')
 Plug('akinsho/bufferline.nvim', { ['tag'] = 'v4.6.1'})
--- Plug('willothy/nvim-cokeline', { ['tag'] = 'v0.4.0'})
 
 -- treesitter
 Plug('nvim-treesitter/nvim-treesitter', { ['tag'] = 'v0.9.2' , ['do'] = ':TSUpdate'})
@@ -74,9 +72,6 @@ Plug('nvim-treesitter/nvim-treesitter', { ['tag'] = 'v0.9.2' , ['do'] = ':TSUpda
 -- LSP Support
 Plug('neovim/nvim-lspconfig', { ['tag'] = 'v0.1.8'})
 Plug('hrsh7th/cmp-nvim-lsp')
-
--- diagnostic lines
-Plug('https://git.sr.ht/~whynothugo/lsp_lines.nvim')
 
 -- Autocompletion
 Plug('hrsh7th/nvim-cmp')
