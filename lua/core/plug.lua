@@ -1,7 +1,6 @@
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 -- Colorscheme
---Plug('joshdick/onedark.vim')
 Plug('RedsXDD/neopywal.nvim', { ['as'] = 'neopywal' })
 
 -- motions
@@ -9,6 +8,7 @@ Plug('yuttie/comfortable-motion.vim')
 
 -- table mode
 Plug('dhruvasagar/vim-table-mode')
+
 -- colorizer for colors in files
 Plug('NvChad/nvim-colorizer.lua')
 
@@ -40,6 +40,8 @@ Plug('windwp/nvim-autopairs')
 
 -- indentation
 Plug('Yggdroot/indentLine')
+
+-- cursor word highlight
 Plug('antoinemadec/FixCursorHold.nvim')
 Plug('tzachar/local-highlight.nvim')
 
@@ -79,11 +81,11 @@ Plug('https://git.sr.ht/~whynothugo/lsp_lines.nvim')
 -- Autocompletion
 Plug('hrsh7th/nvim-cmp')
 Plug('L3MON4D3/LuaSnip')
-Plug('rafamadriz/friendly-snippets') -- Optional
-Plug('saadparwaiz1/cmp_luasnip') -- Optional
-Plug('hrsh7th/cmp-nvim-lua')     -- Optional
-Plug('hrsh7th/cmp-buffer')       -- Optional
-Plug('hrsh7th/cmp-path')         -- Optional
+Plug('rafamadriz/friendly-snippets')
+Plug('saadparwaiz1/cmp_luasnip')
+Plug('hrsh7th/cmp-nvim-lua')
+Plug('hrsh7th/cmp-buffer')
+Plug('hrsh7th/cmp-path')
 Plug('andersevenrud/cmp-tmux')
 Plug('amarakon/nvim-cmp-buffer-lines')
 
@@ -91,6 +93,6 @@ Plug('amarakon/nvim-cmp-buffer-lines')
 Plug('VonHeikemen/lsp-zero.nvim', { branch = 'v3.x'})
 
 -- mason
-Plug('williamboman/mason.nvim')           -- Optional
-Plug('williamboman/mason-lspconfig.nvim') -- Optional
+Plug('williamboman/mason.nvim')
+Plug('williamboman/mason-lspconfig.nvim')
 vim.call('plug#end')
