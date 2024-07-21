@@ -38,7 +38,7 @@ Plug('lervag/vimtex')
 -- pairs
 Plug('windwp/nvim-autopairs')
 
--- indentation
+-- indentation level
 Plug('Yggdroot/indentLine')
 
 -- cursor word highlight
@@ -52,8 +52,14 @@ Plug('gennaro-tedesco/nvim-peekup')
 -- git
 Plug('airblade/vim-gitgutter')
 Plug('jreybert/vimagit')
+
+-- risc v asm syntax
 Plug('henry-hsieh/riscv-asm-vim')
+
+-- search highlight
 Plug('glepnir/hlsearch.nvim')
+
+-- tabulation auto align
 Plug('godlygeek/tabular')
 
 -- filetree
