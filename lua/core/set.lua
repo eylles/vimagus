@@ -103,6 +103,6 @@ opt.isfname:append("@-@")
 
 opt.updatetime = 50
 
-opt.colorcolumn = "80"
+opt.colorcolumn = "+1"
 
 vim.cmd('colorscheme neopywal')
