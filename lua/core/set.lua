@@ -66,7 +66,7 @@ opt.softtabstop = 4
 opt.smartindent = true    -- Autoindent new lines
 opt.autoindent = true     -- match previous line indent when doinng O or o
 
-opt.wrap = false
+opt.wrap = true
 
 opt.swapfile = false
 opt.backup = false
