@@ -97,7 +97,7 @@ opt.autoread = true       -- Automatically reread the file if a change was detec
 opt.showmode = false      -- don't show mode indicator line
 opt.pumheight = 10        -- height of pop up menu
 
-opt.scrolloff = 8
+opt.scrolloff = 5
 opt.signcolumn = "yes"
 opt.isfname:append("@-@")
 
