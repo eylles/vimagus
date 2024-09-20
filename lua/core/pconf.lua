@@ -264,9 +264,12 @@ cmp.setup({
     {name = 'nvim_lsp'},
     {name = 'nvim_lua'},
     {name = 'buffer', keyword_length = 3},
-    -- {name = 'buffer-lines'},
+    {name = 'buffer-lines'},
+    {name = 'nvim_lsp_signature_help'},
+    {name = 'treesitter'},
+    {name = 'omni', option = { disable_omnifuncs = { 'v:lua.vim.lsp.omnifunc' }}},
     {name = 'luasnip', keyword_length = 2},
-    {name = 'tmux', all_panes = true, capture_history = true,},
+    {name = 'tmux', option = { all_panes = true, capture_history = true,}},
   }
 })
 

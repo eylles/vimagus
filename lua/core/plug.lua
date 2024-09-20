@@ -89,6 +89,9 @@ Plug('hrsh7th/cmp-buffer')
 Plug('hrsh7th/cmp-path')
 Plug('andersevenrud/cmp-tmux')
 Plug('amarakon/nvim-cmp-buffer-lines')
+Plug('hrsh7th/cmp-nvim-lsp-signature-help')
+Plug('ray-x/cmp-treesitter')
+Plug('hrsh7th/cmp-omni')
 
 -- lsp-zerp
 Plug('VonHeikemen/lsp-zero.nvim', { branch = 'v3.x'})
