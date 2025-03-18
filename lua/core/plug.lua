@@ -22,6 +22,7 @@ Plug('chrisbra/csv.vim')
 Plug('intrntbrn/awesomewm-vim-tmux-navigator')
 
 -- wiki
+Plug('mattn/calendar-vim')
 Plug('vimwiki/vimwiki')
 
 -- tpope goodness
