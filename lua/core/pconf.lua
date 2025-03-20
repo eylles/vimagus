@@ -2,31 +2,31 @@
 -- colorizer --
 ---------------
 require'colorizer'.setup  {
-      filetypes = { "*" },
-      user_default_options = {
-        RGB = true, -- #RGB hex codes
-        RRGGBB = true, -- #RRGGBB hex codes
-        names = true, -- "Name" codes like Blue or blue
-        RRGGBBAA = true, -- #RRGGBBAA hex codes
-        AARRGGBB = true, -- 0xAARRGGBB hex codes
-        rgb_fn = true, -- CSS rgb() and rgba() functions
-        hsl_fn = true, -- CSS hsl() and hsla() functions
-        css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-        css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-        -- Available modes for `mode`: foreground, background,  virtualtext
-        mode = "background", -- Set the display mode.
-        -- Available methods are false / true / "normal" / "lsp" / "both"
-        -- True is same as normal
-        tailwind = true, -- Enable tailwind colors
-        -- parsers can contain values used in |user_default_options|
-        sass = { enable = true, parsers = { "css" }, }, -- Enable sass colors
-        virtualtext = "■",
-        -- update color values even if buffer is not focused
-        -- example use: cmp_menu, cmp_docs
-        always_update = false
-      },
-      -- all the sub-options of filetypes apply to buftypes
-      buftypes = {},
+  filetypes = { "*" },
+  user_default_options = {
+    RGB = true, -- #RGB hex codes
+    RRGGBB = true, -- #RRGGBB hex codes
+    names = true, -- "Name" codes like Blue or blue
+    RRGGBBAA = true, -- #RRGGBBAA hex codes
+    AARRGGBB = true, -- 0xAARRGGBB hex codes
+    rgb_fn = true, -- CSS rgb() and rgba() functions
+    hsl_fn = true, -- CSS hsl() and hsla() functions
+    css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+    css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+    -- Available modes for `mode`: foreground, background,  virtualtext
+    mode = "background", -- Set the display mode.
+    -- Available methods are false / true / "normal" / "lsp" / "both"
+    -- True is same as normal
+    tailwind = true, -- Enable tailwind colors
+    -- parsers can contain values used in |user_default_options|
+    sass = { enable = true, parsers = { "css" }, }, -- Enable sass colors
+    virtualtext = "■",
+    -- update color values even if buffer is not focused
+    -- example use: cmp_menu, cmp_docs
+    always_update = false
+  },
+  -- all the sub-options of filetypes apply to buftypes
+  buftypes = {},
 }
 
 ---------------
@@ -73,9 +73,9 @@ require('hlsearch').setup()
 -- local-highlight --
 ---------------------
 require('local-highlight').setup({
-    file_types = {'*'},
-    hlgroup = 'Search',
-    cw_hlgroup = 'CursorWord',
+  file_types = {'*'},
+  hlgroup = 'Search',
+  cw_hlgroup = 'CursorWord',
 })
 
 
@@ -136,7 +136,8 @@ require'nvim-treesitter.configs'.setup {
   -- ignore_install = { "javascript" },
 
   ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
-  -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
+  -- parser_install_dir = "/some/path/to/store/parsers",
+  -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
 
   highlight = {
     enable = true,
@@ -188,33 +189,33 @@ require('lspconfig').lua_ls.setup({})
 -- to learn how to use mason.nvim
 -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guide/integrate-with-mason-nvim.md
 require("mason").setup({
-    ui = {
-        icons = {
-            package_installed = "✔",
-            package_pending = "●",
-            package_uninstalled = "✗"
-        },
-        keymaps = {
-            -- Keymap to expand a package
-            toggle_package_expand = "<CR>",
-            -- Keymap to install the package under the current cursor position
-            install_package = "i",
-            -- Keymap to reinstall/update the package under the current cursor position
-            update_package = "u",
-            -- Keymap to check for new version for the package under the current cursor position
-            check_package_version = "e",
-            -- Keymap to update all installed packages
-            update_all_packages = "U",
-            -- Keymap to check which installed packages are outdated
-            check_outdated_packages = "o",
-            -- Keymap to uninstall a package
-            uninstall_package = "X",
-            -- Keymap to cancel a package installation
-            cancel_installation = "c",
-            -- Keymap to apply language filter
-            apply_language_filter = "F",
-        },
+  ui = {
+    icons = {
+      package_installed = "✔",
+      package_pending = "●",
+      package_uninstalled = "✗"
     },
+    keymaps = {
+      -- Keymap to expand a package
+      toggle_package_expand = "<CR>",
+      -- Keymap to install the package under the current cursor position
+      install_package = "i",
+      -- Keymap to reinstall/update the package under the current cursor position
+      update_package = "u",
+      -- Keymap to check for new version for the package under the current cursor position
+      check_package_version = "e",
+      -- Keymap to update all installed packages
+      update_all_packages = "U",
+      -- Keymap to check which installed packages are outdated
+      check_outdated_packages = "o",
+      -- Keymap to uninstall a package
+      uninstall_package = "X",
+      -- Keymap to cancel a package installation
+      cancel_installation = "c",
+      -- Keymap to apply language filter
+      apply_language_filter = "F",
+    },
+  },
 })
 
 require('mason-lspconfig').setup({
@@ -245,19 +246,19 @@ cmp.setup({
     ['<C-d>']   = cmp.mapping.scroll_docs(4),
     ['<CR>'] = cmp.mapping.confirm({select = false}),
     ['<Tab>']   = cmp.mapping(function()
-                    if cmp.visible() then
-                       cmp.select_next_item({behavior = 'insert'})
-                     else
-                       cmp.complete()
-                     end
-                   end),
+      if cmp.visible() then
+        cmp.select_next_item({behavior = 'insert'})
+      else
+        cmp.complete()
+      end
+    end),
     ['<S-Tab>'] = cmp.mapping(function()
-                    if cmp.visible() then
-                       cmp.select_prev_item({behavior = 'insert'})
-                     else
-                       cmp.complete()
-                     end
-                   end),
+      if cmp.visible() then
+        cmp.select_prev_item({behavior = 'insert'})
+      else
+        cmp.complete()
+      end
+    end),
   }),
   sources = {
     {name = 'path'},
@@ -288,7 +289,7 @@ require("neo-tree").setup()
 -- lualine --
 -------------
 local location = function()
-	return "ln: " .. "%l" .. " " .. "cl:" .. "%v"
+  return "ln:" .. "%l" .. " " .. "cl:" .. "%v"
 end
 require('lualine').setup {
   options = {
@@ -334,31 +335,31 @@ require('lualine').setup {
 
 -- local C = require("neopywal").get_colors()
 require("bufferline").setup{
-    highlights = require("neopywal.theme.plugins.bufferline").setup(),
-    options = {
-        themeable = true,
-        -- mode = 'tabs',
-        numbers = "ordinal",
-		buffer_close_icon = "",
-		close_icon = "",
-		modified_icon = "●",
-		left_trunc_marker = "",
-		right_trunc_marker = "",
-		diagnostics = "nvim_lsp",
-        separator_style = 'slope',
-        hover = {
-            enabled = true,
-            delay = 200,
-            reveal = {'close'}
-        },
-        offsets = { -- TODO: not saying "File Explorer, saying NvimTree_1"
-				{
-                    highlight = "BufferLineFill",
-				    filetype = "neo-tree",
-				    text = "  File Explorer",
-				    text_align = "left",
-				    separator = true,
-				}
-			},
+  highlights = require("neopywal.theme.plugins.bufferline").setup(),
+  options = {
+    themeable = true,
+    -- mode = 'tabs',
+    numbers = "ordinal",
+    buffer_close_icon = "",
+    close_icon = "",
+    modified_icon = "●",
+    left_trunc_marker = "",
+    right_trunc_marker = "",
+    diagnostics = "nvim_lsp",
+    separator_style = 'slope',
+    hover = {
+      enabled = true,
+      delay = 100,
+      reveal = {'close'}
     },
+    offsets = { -- TODO: not saying "File Explorer, saying NvimTree_1"
+    {
+      highlight = "BufferLineFill",
+      filetype = "neo-tree",
+      text = "  File Explorer",
+      text_align = "left",
+      separator = true,
+    }
+  },
+},
 }
