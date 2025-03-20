@@ -1,7 +1,7 @@
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 -- Colorscheme
-Plug('RedsXDD/neopywal.nvim', { ['as'] = 'neopywal' })
+Plug('RedsXDD/neopywal.nvim', { ['tag'] = 'v2.4.0', ['as'] = 'neopywal' })
 
 -- motions
 Plug('yuttie/comfortable-motion.vim')
