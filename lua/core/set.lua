@@ -1,4 +1,3 @@
-local g = vim.g     -- Global variables
 local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 
 -- function to set autogroups easily
