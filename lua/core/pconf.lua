@@ -289,6 +289,11 @@ require("neo-tree").setup()
 -------------
 -- lualine --
 -------------
+-- get separators from environment
+local sep_s_l = os.getenv("SEP_S_L") or " "
+local sep_s_r = os.getenv("SEP_S_R") or " "
+local sep_c_l = os.getenv("SEP_C_L") or "|"
+local sep_c_r = os.getenv("SEP_C_R") or "|"
 local location = function()
   return "ln:" .. "%l" .. " " .. "cl:" .. "%v"
 end
@@ -297,8 +302,8 @@ require('lualine').setup {
     icons_enabled = true,
     theme = 'neopywal',
     -- theme = 'auto',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    component_separators = { left = sep_c_l, right = sep_c_r},
+    section_separators = { left = sep_s_l, right = sep_s_r},
     disabled_filetypes = {
       statusline = {},
       winbar = {},
