@@ -6,6 +6,9 @@ Plug('RedsXDD/neopywal.nvim', { ['tag'] = 'v2.4.0', ['as'] = 'neopywal' })
 -- motions and animation
 Plug('echasnovski/mini.animate', { ['branch'] = 'stable' })
 
+-- buffer management
+Plug('echasnovski/mini.bufremove', { ['branch'] = 'stable' })
+
 -- table mode
 Plug('dhruvasagar/vim-table-mode')
 

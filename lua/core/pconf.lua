@@ -119,6 +119,11 @@ vim.g.gitgutter_grep=''
 ---------------------------------------
 require('mini.animate').setup()
 
+-----------------------
+-- buffer management --
+-----------------------
+require('mini.bufremove').setup()
+
 ----------------
 -- treesitter --
 ----------------
