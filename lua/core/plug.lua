@@ -95,7 +95,7 @@ Plug('ray-x/cmp-treesitter')
 Plug('hrsh7th/cmp-omni')
 
 -- lsp-zerp
-Plug('VonHeikemen/lsp-zero.nvim', { branch = 'v3.x'})
+Plug('VonHeikemen/lsp-zero.nvim', { ['branch'] = 'v3.x'})
 
 -- mason
 Plug('williamboman/mason.nvim')
