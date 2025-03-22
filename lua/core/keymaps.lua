@@ -44,6 +44,8 @@ vim.keymap.set("n", "<leader>bq",
   end
 )
 
+vim.keymap.set("n", "<Leader>l", require("lsp_lines").toggle)
+
 -- greatest remap
 -- copy over highlighted
 vim.keymap.set("x", "<leader>p", "\"_dp")

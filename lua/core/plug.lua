@@ -83,6 +83,9 @@ Plug('nvim-treesitter/nvim-treesitter', { ['tag'] = 'v0.9.2' , ['do'] = ':TSUpda
 Plug('neovim/nvim-lspconfig', { ['tag'] = 'v0.1.8'})
 Plug('hrsh7th/cmp-nvim-lsp')
 
+-- diagnostic lines
+Plug('https://git.sr.ht/~whynothugo/lsp_lines.nvim')
+
 -- Autocompletion
 Plug('hrsh7th/nvim-cmp')
 Plug('L3MON4D3/LuaSnip')
