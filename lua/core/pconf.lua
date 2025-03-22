@@ -117,7 +117,11 @@ vim.g.gitgutter_grep=''
 ---------------------------------------
 -- comfortable motions and animation --
 ---------------------------------------
-require('mini.animate').setup()
+require('mini.animate').setup({
+  scroll = {
+    timing = function(_, n) return math.min(250 / n, 5) end,
+  }
+})
 
 -----------------------
 -- buffer management --
