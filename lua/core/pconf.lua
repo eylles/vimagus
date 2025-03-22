@@ -100,9 +100,13 @@ vim.g.vimwiki_conceallevel = 1
 ----------------
 -- indentline --
 ----------------
-
 vim.g.indentLine_concealcursor = 'c'
 vim.g.indentLine_conceallevel = 2
+
+-----------------
+-- indentscope --
+-----------------
+require('mini.indentscope').setup()
 
 ---------------
 -- gitgutter --

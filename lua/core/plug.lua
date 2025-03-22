@@ -41,6 +41,7 @@ Plug('windwp/nvim-autopairs')
 
 -- indentation level
 Plug('Yggdroot/indentLine')
+Plug('echasnovski/mini.indentscope', { ['branch'] = 'stable' })
 
 -- cursor word highlight
 Plug('antoinemadec/FixCursorHold.nvim')
