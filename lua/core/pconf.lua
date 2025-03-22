@@ -301,6 +301,7 @@ require('lualine').setup {
     },
     ignore_focus = {},
     always_divide_middle = true,
+    always_show_tabline = true,
     globalstatus = false,
     refresh = {
       statusline = 1000,
@@ -324,39 +325,15 @@ require('lualine').setup {
     lualine_y = {},
     lualine_z = {location}
   },
-  tabline = {},
+  tabline = {
+    lualine_a = {{'buffers', symbols = { alternate_file = '# ' }}},
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {}
+  },
   winbar = {},
   inactive_winbar = {},
   extensions = {}
-}
-
--- local C = require("neopywal").get_colors()
-require("bufferline").setup{
-  highlights = require("neopywal.theme.plugins.bufferline").setup(),
-  options = {
-    themeable = true,
-    -- mode = 'tabs',
-    numbers = "ordinal",
-    buffer_close_icon = "",
-    close_icon = "",
-    modified_icon = "●",
-    left_trunc_marker = "",
-    right_trunc_marker = "",
-    diagnostics = "nvim_lsp",
-    separator_style = 'slope',
-    hover = {
-      enabled = true,
-      delay = 100,
-      reveal = {'close'}
-    },
-    offsets = { -- TODO: not saying "File Explorer, saying NvimTree_1"
-    {
-      highlight = "BufferLineFill",
-      filetype = "neo-tree",
-      text = "  File Explorer",
-      text_align = "left",
-      separator = true,
-    }
-  },
-},
 }

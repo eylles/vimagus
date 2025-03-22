@@ -71,7 +71,6 @@ Plug('nvim-neo-tree/neo-tree.nvim', { ['branch'] = 'v3.x'})
 
 -- status line
 Plug('nvim-lualine/lualine.nvim')
-Plug('akinsho/bufferline.nvim', { ['tag'] = 'v4.6.1'})
 
 -- treesitter
 Plug('nvim-treesitter/nvim-treesitter', { ['tag'] = 'v0.9.2' , ['do'] = ':TSUpdate'})
