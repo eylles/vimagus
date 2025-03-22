@@ -3,8 +3,8 @@ vim.call('plug#begin')
 -- Colorscheme
 Plug('RedsXDD/neopywal.nvim', { ['tag'] = 'v2.4.0', ['as'] = 'neopywal' })
 
--- motions
-Plug('yuttie/comfortable-motion.vim')
+-- motions and animation
+Plug('echasnovski/mini.animate', { ['branch'] = 'stable' })
 
 -- table mode
 Plug('dhruvasagar/vim-table-mode')

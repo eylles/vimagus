@@ -110,13 +110,10 @@ vim.g.indentLine_conceallevel = 2
 vim.g.gitgutter_enabled = 1
 vim.g.gitgutter_grep=''
 
--------------------------
--- comfortable motions --
--------------------------
-vim.g.comfortable_motion_no_default_key_mappings = 1
-vim.g.comfortable_motion_impulse_multiplier = 0.5  -- Feel free to increase/decrease this value.
-vim.g.comfortable_motion_friction = 50.0
-vim.g.comfortable_motion_air_drag = 1.0
+---------------------------------------
+-- comfortable motions and animation --
+---------------------------------------
+require('mini.animate').setup()
 
 ----------------
 -- treesitter --
