@@ -289,11 +289,93 @@ require("neo-tree").setup()
 -------------
 -- lualine --
 -------------
--- get separators from environment
-local sep_s_l = os.getenv("SEP_S_L") or " "
-local sep_s_r = os.getenv("SEP_S_R") or " "
-local sep_c_l = os.getenv("SEP_C_L") or "|"
-local sep_c_r = os.getenv("SEP_C_R") or "|"
+--separators table
+local separators = {
+  triangle = {
+    lsep="",
+    rsep="",
+    alsep="",
+    arsep="",
+  },
+  round = {
+    lsep="",
+    rsep="",
+    alsep="",
+    arsep="",
+  },
+  slant1 = {
+    lsep="",
+    rsep="",
+    alsep="",
+    arsep="",
+  },
+  slant2 = {
+    lsep="",
+    rsep="",
+    alsep="",
+    arsep="",
+  },
+  fire = {
+    lsep="",
+    rsep="",
+    alsep="",
+    arsep="",
+  },
+  block = {
+    lsep="",
+    rsep="",
+    alsep="",
+    arsep="",
+  },
+  none = {
+    lsep="",
+    rsep="",
+    alsep="|",
+    arsep="|",
+  },
+}
+
+-- get separators from config
+
+local conf_home_dir = os.getenv('XDG_CONFIG_HOME')
+if not conf_home_dir then
+  conf_home_dir = os.getenv('HOME') .. '/.config'
+end
+
+local sep_conf = conf_home_dir .. '/shell/promptrc'
+
+-- see if the file exists
+local function file_exists(file)
+  local f = io.open(file, "rb")
+  if f then f:close() end
+  return f ~= nil
+end
+
+-- this is probably inefficient since
+-- it uses io instead of doing this in
+-- some async manner... oh well
+local function read_config(file)
+  local k, v
+  if not file_exists(file) then return nil end
+  for line in io.lines(file) do
+    k,v = line:match('^([^=]+)=(.+)$')
+    if k == 'septype' then
+      return v
+    end
+  end
+end
+
+local sept_style = read_config(sep_conf) or 'none'
+
+sept_style = string.lower(sept_style)
+
+if sept_style == 'classic' then sept_style = 'triangle' end
+
+local sep_s_l = separators[sept_style]['lsep']
+local sep_s_r = separators[sept_style]['rsep']
+local sep_c_l = separators[sept_style]['alsep']
+local sep_c_r = separators[sept_style]['arsep']
+
 local location = function()
   return "ln:" .. "%l" .. " " .. "cl:" .. "%v"
 end
