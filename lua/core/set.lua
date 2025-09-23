@@ -46,7 +46,8 @@ opt.smartcase = true                          -- Ignore lowercase for the whole 
 opt.timeoutlen = 500                          -- time to wait for a mapped sequence to complete in ms
 opt.updatetime = 300                          -- faster completion
 opt.undofile = true                           -- enable persistent undo
-opt.spell = true                           -- enable spellcheck
+opt.spell = true                              -- enable spellcheck
+opt.spelllang = {"en_us", "es"}               -- languages for spell checking
 
 opt.list = false          -- Show line number
 opt.number = true         -- Show line number
