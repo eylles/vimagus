@@ -1,7 +1,7 @@
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 -- Colorscheme
-Plug('eylles/neopywal.nvim', { ['branch'] = 'nvim_0.9_support', ['as'] = 'neopywal' })
+Plug('RedsXDD/neopywal.nvim', { ['branch'] = 'master', ['as'] = 'neopywal' })
 
 -- motions and animation
 Plug('echasnovski/mini.animate', { ['branch'] = 'stable' })
