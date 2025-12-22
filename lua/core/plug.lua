@@ -4,10 +4,10 @@ vim.call('plug#begin')
 Plug('RedsXDD/neopywal.nvim', { ['branch'] = 'master', ['as'] = 'neopywal' })
 
 -- motions and animation
-Plug('echasnovski/mini.animate', { ['branch'] = 'stable' })
+Plug('nvim-mini/mini.animate', { ['branch'] = 'stable' })
 
 -- buffer management
-Plug('echasnovski/mini.bufremove', { ['branch'] = 'stable' })
+Plug('nvim-mini/mini.bufremove', { ['branch'] = 'stable' })
 
 -- table mode
 Plug('dhruvasagar/vim-table-mode')
@@ -44,7 +44,7 @@ Plug('windwp/nvim-autopairs')
 
 -- indentation level
 Plug('Yggdroot/indentLine')
-Plug('echasnovski/mini.indentscope', { ['branch'] = 'stable' })
+Plug('nvim-mini/mini.indentscope', { ['branch'] = 'stable' })
 
 -- cursor word highlight
 Plug('antoinemadec/FixCursorHold.nvim')
