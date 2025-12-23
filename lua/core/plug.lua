@@ -77,19 +77,17 @@ Plug('nvim-neo-tree/neo-tree.nvim', { ['branch'] = 'v3.x'})
 Plug('nvim-lualine/lualine.nvim')
 
 -- treesitter
-Plug('nvim-treesitter/nvim-treesitter', { ['tag'] = 'v0.9.2' , ['do'] = ':TSUpdate'})
+Plug('nvim-treesitter/nvim-treesitter', { ['tag'] = 'v0.9.3' , ['do'] = ':TSUpdate'})
 
 -- LSP Support
-Plug('neovim/nvim-lspconfig', { ['tag'] = 'v0.1.8'})
-Plug('hrsh7th/cmp-nvim-lsp')
+Plug('neovim/nvim-lspconfig', { ['tag'] = 'v1.8.0'})
 
 -- diagnostic lines
 Plug('https://git.sr.ht/~whynothugo/lsp_lines.nvim')
 
 -- Autocompletion
+Plug('hrsh7th/cmp-nvim-lsp')
 Plug('hrsh7th/nvim-cmp')
-Plug('L3MON4D3/LuaSnip')
-Plug('rafamadriz/friendly-snippets')
 Plug('saadparwaiz1/cmp_luasnip')
 Plug('hrsh7th/cmp-nvim-lua')
 Plug('hrsh7th/cmp-buffer')
@@ -99,11 +97,13 @@ Plug('amarakon/nvim-cmp-buffer-lines')
 Plug('hrsh7th/cmp-nvim-lsp-signature-help')
 Plug('ray-x/cmp-treesitter')
 Plug('hrsh7th/cmp-omni')
+Plug('L3MON4D3/LuaSnip')
+Plug('rafamadriz/friendly-snippets')
 
 -- lsp-zerp
 Plug('VonHeikemen/lsp-zero.nvim', { ['branch'] = 'v3.x'})
 
 -- mason
-Plug('williamboman/mason.nvim')
-Plug('williamboman/mason-lspconfig.nvim')
+Plug('williamboman/mason.nvim', { ['tag'] = 'v1.11.0'})
+Plug('williamboman/mason-lspconfig.nvim', { ['tag'] = 'v1.32.0'})
 vim.call('plug#end')
