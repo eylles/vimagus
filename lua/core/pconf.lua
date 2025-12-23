@@ -76,6 +76,9 @@ require('local-highlight').setup({
   file_types = {'*'},
   hlgroup = 'Search',
   cw_hlgroup = 'CursorWord',
+  animate = {
+      enabled = false,
+  },
 })
 
 
@@ -293,7 +296,9 @@ cmp.setup({
 -- neo-tree --
 --------------
 
-require("neo-tree").setup()
+require('neo-tree').setup({
+  close_if_last_window = true,
+})
 
 -------------
 -- lualine --
