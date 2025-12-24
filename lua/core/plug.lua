@@ -3,11 +3,8 @@ vim.call('plug#begin')
 -- Colorscheme
 Plug('RedsXDD/neopywal.nvim', { ['branch'] = 'master', ['as'] = 'neopywal' })
 
--- motions and animation
-Plug('nvim-mini/mini.animate', { ['branch'] = 'stable' })
-
--- buffer management
-Plug('nvim-mini/mini.bufremove', { ['branch'] = 'stable' })
+-- mini.nvim
+Plug('nvim-mini/mini.nvim', { ['branch'] = 'stable' })
 
 -- table mode
 Plug('dhruvasagar/vim-table-mode')
@@ -44,7 +41,6 @@ Plug('windwp/nvim-autopairs')
 
 -- indentation level
 Plug('Yggdroot/indentLine')
-Plug('nvim-mini/mini.indentscope', { ['branch'] = 'stable' })
 
 -- cursor word highlight
 Plug('antoinemadec/FixCursorHold.nvim')
