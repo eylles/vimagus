@@ -42,10 +42,6 @@ Plug('windwp/nvim-autopairs')
 -- indentation level
 Plug('Yggdroot/indentLine')
 
--- cursor word highlight
-Plug('antoinemadec/FixCursorHold.nvim')
-Plug('tzachar/local-highlight.nvim')
-
 -- smart yanking
 Plug('ibhagwan/smartyank.nvim')
 Plug('gennaro-tedesco/nvim-peekup')

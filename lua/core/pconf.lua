@@ -69,18 +69,10 @@ require('smartyank').setup {
 --------------
 require('hlsearch').setup()
 
----------------------
--- local-highlight --
----------------------
-require('local-highlight').setup({
-  file_types = {'*'},
-  hlgroup = 'Search',
-  cw_hlgroup = 'CursorWord',
-  animate = {
-      enabled = false,
-  },
-})
-
+----------------
+-- cursorword --
+----------------
+require('mini.cursorword').setup()
 
 ---------------
 -- autopairs --
