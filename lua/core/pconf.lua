@@ -92,12 +92,6 @@ vim.g.vimwiki_table_mappings = 0
 vim.g.vimwiki_global_ext = 0
 vim.g.vimwiki_conceallevel = 1
 
-----------------
--- indentline --
-----------------
-vim.g.indentLine_concealcursor = 'c'
-vim.g.indentLine_conceallevel = 2
-
 -----------------
 -- indentscope --
 -----------------

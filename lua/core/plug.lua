@@ -39,9 +39,6 @@ Plug('lervag/vimtex')
 -- pairs
 Plug('windwp/nvim-autopairs')
 
--- indentation level
-Plug('Yggdroot/indentLine')
-
 -- smart yanking
 Plug('ibhagwan/smartyank.nvim')
 Plug('gennaro-tedesco/nvim-peekup')
