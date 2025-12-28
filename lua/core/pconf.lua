@@ -428,3 +428,8 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+
+------------------
+-- start screen --
+------------------
+require('mini.starter').setup()
