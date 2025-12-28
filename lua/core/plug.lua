@@ -69,7 +69,7 @@ Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-treesitter/nvim-treesitter', { ['tag'] = 'v0.9.3' , ['do'] = ':TSUpdate'})
 
 -- LSP Support
-Plug('neovim/nvim-lspconfig', { ['tag'] = 'v1.8.0'})
+Plug('neovim/nvim-lspconfig', { ['tag'] = 'v2.0.0'})
 
 -- diagnostic lines
 Plug('https://git.sr.ht/~whynothugo/lsp_lines.nvim')
