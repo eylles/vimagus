@@ -101,7 +101,6 @@ require('mini.indentscope').setup()
 -- gitgutter --
 ---------------
 vim.g.gitgutter_enabled = 1
-vim.g.gitgutter_grep=''
 
 ---------------------------------------
 -- comfortable motions and animation --
