@@ -1,7 +1,7 @@
 ---------------
 -- colorizer --
 ---------------
-require'colorizer'.setup  {
+require'colorizer'.setup({
   filetypes = { "*" },
   user_default_options = {
     RGB = true, -- #RGB hex codes
@@ -27,12 +27,12 @@ require'colorizer'.setup  {
   },
   -- all the sub-options of filetypes apply to buftypes
   buftypes = {},
-}
+})
 
 ---------------
 -- smartyank --
 ---------------
-require('smartyank').setup {
+require('smartyank').setup({
   highlight = {
     enabled = true,         -- highlight yanked text
     higroup = "IncSearch",  -- highlight group of yanked text
@@ -62,7 +62,7 @@ require('smartyank').setup {
   -- For advanced customization set to a lua function returning a boolean
   -- for example, the default condition is:
   -- validate_yank = function() return vim.v.operator == "y" end,
-}
+})
 
 --------------
 -- hlsearch --
@@ -77,7 +77,7 @@ require('mini.cursorword').setup()
 ---------------
 -- autopairs --
 ---------------
-require("nvim-autopairs").setup {}
+require("nvim-autopairs").setup()
 
 --------------------
 -- tmux navigator --
@@ -120,7 +120,7 @@ require('mini.bufremove').setup()
 ----------------
 -- treesitter --
 ----------------
-require'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.configs').setup({
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
 
@@ -162,7 +162,7 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
-}
+})
 
 --------------
 -- lsp-zero --
