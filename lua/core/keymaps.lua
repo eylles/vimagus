@@ -1,11 +1,11 @@
 vim.g.mapleader = ","
 vim.g.maplocalleader = "-"
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, {desc = "Ex commands"})
 
 --vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 --vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("n", "J", "mzJ`z", {desc = "Join line below"})
 -- vim.keymap.set('n', '<C-d>',
 --   [[<Cmd>lua vim.cmd('normal! <C-d>'); MiniAnimate.execute_after('scroll', 'normal! zvzz')<CR>]]
 -- )
@@ -20,10 +20,10 @@ vim.keymap.set("n", "J", "mzJ`z")
 -- )
 
 -- nnoremap <leader>u :UndotreeToggle<CR>
-vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, {desc = "toggle undotree"})
 
 -- nnoremap <leader>u :NvimTreeToggle<CR>
-vim.keymap.set("n", "<leader>n", '<Cmd>Neotree toggle<CR>')
+vim.keymap.set("n", "<leader>n", '<Cmd>Neotree toggle<CR>', {desc = "toggle neotree"})
 
 -- close buffer
 -- yes this is stolen from lazyvim
@@ -43,22 +43,74 @@ vim.keymap.set("n", "<leader>bq",
     else
       bd(0)
     end
-  end
+  end,
+  { desc = "close buffer" }
 )
 
-vim.keymap.set("n", "<Leader>l", require("lsp_lines").toggle)
+vim.keymap.set("n", "<Leader>l", require("lsp_lines").toggle, {desc = "toggle lsp lines"})
 
 -- greatest remap
 -- copy over highlighted
-vim.keymap.set("x", "<leader>p", "\"_dp")
+vim.keymap.set("x", "<leader>p", "\"_dp", { desc = "cope over highlighted"})
 
 vim.keymap.set("n", "Q", "<nop>")
 
 -- replace selected
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set(
+  "n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+  { desc = "replace selected"}
+)
 -- make executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set(
+  "n", "<leader>x", "<cmd>!chmod +x %<CR>",
+  { silent = true, desc = "make script executable" }
+)
 
 -- load vimscript defined keymaps
 
 vim.cmd('source ~/.config/nvim/lua/core/keymaps.vim')
+
+local miniclue = require('mini.clue')
+miniclue.setup({
+  triggers = {
+    -- Leader triggers
+    { mode = 'n', keys = '<Leader>' },
+    { mode = 'x', keys = '<Leader>' },
+
+    -- Built-in completion
+    { mode = 'i', keys = '<C-x>' },
+
+    -- `g` key
+    { mode = 'n', keys = 'g' },
+    { mode = 'x', keys = 'g' },
+
+    -- Marks
+    { mode = 'n', keys = "'" },
+    { mode = 'n', keys = '`' },
+    { mode = 'x', keys = "'" },
+    { mode = 'x', keys = '`' },
+
+    -- Registers
+    { mode = 'n', keys = '"' },
+    { mode = 'x', keys = '"' },
+    { mode = 'i', keys = '<C-r>' },
+    { mode = 'c', keys = '<C-r>' },
+
+    -- Window commands
+    { mode = 'n', keys = '<C-w>' },
+
+    -- `z` key
+    { mode = 'n', keys = 'z' },
+    { mode = 'x', keys = 'z' },
+  },
+
+  clues = {
+    -- Enhance this by adding descriptions for <Leader> mapping groups
+    miniclue.gen_clues.builtin_completion(),
+    miniclue.gen_clues.g(),
+    miniclue.gen_clues.marks(),
+    miniclue.gen_clues.registers(),
+    miniclue.gen_clues.windows(),
+    miniclue.gen_clues.z(),
+  },
+})
