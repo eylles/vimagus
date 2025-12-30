@@ -39,12 +39,6 @@ inoremap <M-j> <Esc>:m .+1<CR>==gi
 " Perform dot commands over visual blocks:
 vnoremap . :normal .<CR>
 
-" To open a new empty buffer
-nmap <leader>t :enew<cr>
-
-" To open a file in a new buffer
-nmap <leader>e :edit
-
 " Move to the next buffer
 nmap <M-PageDown> :bnext<CR>
 nnoremap<silent> <Tab> :bnext<CR>
@@ -52,6 +46,3 @@ nnoremap<silent> <Tab> :bnext<CR>
 " Move to the previous buffer
 nmap <M-PageUp> :bprevious<CR>
 nnoremap<silent> <S-Tab> :bprevious<CR>
-
-" Show all open buffers and their status
-nmap <leader>bl :ls<CR>

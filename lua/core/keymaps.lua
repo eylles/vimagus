@@ -19,10 +19,8 @@ vim.keymap.set("n", "J", "mzJ`z", {desc = "Join line below"})
 --   [[<Cmd>lua vim.cmd('normal! N'); MiniAnimate.execute_after('scroll', 'normal! zvzz')<CR>]]
 -- )
 
--- nnoremap <leader>u :UndotreeToggle<CR>
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, {desc = "toggle undotree"})
 
--- nnoremap <leader>u :NvimTreeToggle<CR>
 vim.keymap.set("n", "<leader>n", '<Cmd>Neotree toggle<CR>', {desc = "toggle neotree"})
 
 -- close buffer
@@ -47,11 +45,18 @@ vim.keymap.set("n", "<leader>bq",
   { desc = "close buffer" }
 )
 
+
+vim.keymap.set("n", "<leader>bt", "<Cmd>enew<cr>", {desc = "new Empty buffer"})
+
+vim.keymap.set("n", "<leader>be", ":edit ", {desc = "edit file in new buffer"})
+
+vim.keymap.set("n", "<leader>bl", "<Cmd>ls<CR>", {desc = "show all buffers"})
+
 vim.keymap.set("n", "<Leader>l", require("lsp_lines").toggle, {desc = "toggle lsp lines"})
 
 -- greatest remap
 -- copy over highlighted
-vim.keymap.set("x", "<leader>p", "\"_dp", { desc = "cope over highlighted"})
+vim.keymap.set("x", "<leader>p", "\"_dp", { desc = "copy over highlighted"})
 
 vim.keymap.set("n", "Q", "<nop>")
 
