@@ -280,10 +280,11 @@ cmp.setup({
 --------------
 -- neo-tree --
 --------------
-
 require('neo-tree').setup({
   close_if_last_window = true,
 })
+
+require('mini.pick').setup()
 
 -------------
 -- lualine --
