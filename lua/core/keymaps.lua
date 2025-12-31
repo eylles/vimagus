@@ -119,4 +119,12 @@ miniclue.setup({
     miniclue.gen_clues.windows(),
     miniclue.gen_clues.z(),
   },
+
+  window = {
+    -- Delay before showing clue window
+    delay = 700,
+    -- Keys to scroll inside the clue window
+    scroll_down = '<C-d>',
+    scroll_up = '<C-u>',
+  },
 })
