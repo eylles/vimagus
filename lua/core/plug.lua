@@ -36,9 +36,6 @@ Plug('tpope/vim-eunuch')
 -- document writing
 Plug('lervag/vimtex')
 
--- pairs
-Plug('windwp/nvim-autopairs')
-
 -- smart yanking
 Plug('ibhagwan/smartyank.nvim')
 Plug('gennaro-tedesco/nvim-peekup')

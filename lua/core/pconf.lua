@@ -77,7 +77,7 @@ require('mini.cursorword').setup()
 ---------------
 -- autopairs --
 ---------------
-require("nvim-autopairs").setup()
+require('mini.pairs').setup()
 
 --------------------
 -- tmux navigator --
