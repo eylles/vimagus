@@ -84,6 +84,21 @@ require('mini.pairs').setup()
 ------------------
 require('mini.ai').setup()
 
+--------------
+-- surround --
+--------------
+require('mini.surround').setup()
+
+----------------
+-- commentary --
+----------------
+require('mini.comment').setup()
+
+----------------
+-- unimpaired --
+----------------
+require('mini.bracketed').setup()
+
 --------------------
 -- tmux navigator --
 --------------------

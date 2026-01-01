@@ -26,9 +26,6 @@ Plug('mattn/calendar-vim')
 Plug('vimwiki/vimwiki')
 
 -- tpope goodness
-Plug('tpope/vim-commentary')
-Plug('tpope/vim-surround')
-Plug('tpope/vim-unimpaired')
 Plug('tpope/vim-repeat')
 Plug('tpope/vim-git')
 Plug('tpope/vim-eunuch')
