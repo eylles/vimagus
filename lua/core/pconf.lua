@@ -79,6 +79,11 @@ require('mini.cursorword').setup()
 ---------------
 require('mini.pairs').setup()
 
+------------------
+-- text objects --
+------------------
+require('mini.ai').setup()
+
 --------------------
 -- tmux navigator --
 --------------------
@@ -282,6 +287,15 @@ cmp.setup({
 --------------
 require('neo-tree').setup({
   close_if_last_window = true,
+})
+
+-----------
+-- files --
+-----------
+require('mini.files').setup({
+  mappings = {
+    show_help = 'gh',
+  },
 })
 
 require('mini.pick').setup()
