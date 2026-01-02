@@ -12,6 +12,9 @@ Plug('dhruvasagar/vim-table-mode')
 -- colorizer for colors in files
 Plug('NvChad/nvim-colorizer.lua')
 
+-- rainbow delimiters
+Plug('HiPhish/rainbow-delimiters.nvim')
+
 -- undo tree
 Plug('mbbill/undotree')
 

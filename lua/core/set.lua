@@ -111,4 +111,9 @@ opt.updatetime = 50
 
 opt.colorcolumn = "+1"
 
-vim.cmd('colorscheme neopywal')
+require("neopywal").setup({
+    plugins = {
+      rainbow = true,
+    },
+})
+vim.cmd.colorscheme("neopywal")
