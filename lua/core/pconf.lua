@@ -127,7 +127,7 @@ vim.g.gitgutter_enabled = 1
 ---------------------------------------
 require('mini.animate').setup({
   scroll = {
-    timing = function(_, n) return math.min(250 / n, 5) end,
+    timing = function(_, n) return math.min(350 / n, 5) end,
   }
 })
 
