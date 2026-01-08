@@ -52,6 +52,8 @@ vim.keymap.set("n", "<leader>bl", "<Cmd>ls<CR>", {desc = "show all buffers"})
 
 vim.keymap.set("n", "<Leader>l", require("lsp_lines").toggle, {desc = "toggle lsp lines"})
 
+vim.keymap.set("n", "<Leader>M", "<Cmd>Magit<CR>", {desc = "Open Magit"})
+
 -- greatest remap
 -- copy over highlighted
 vim.keymap.set("x", "<leader>p", "\"_dp", { desc = "copy over highlighted"})
