@@ -56,7 +56,7 @@ opt.signcolumn = 'yes'    -- always show the sign column
 opt.relativenumber = true -- Show line number
 opt.showmatch = true      -- Highlight matching parenthesis
 
-opt.cmdheight = 2         -- more space in the neovim command line for displaying messages
+opt.cmdheight = 0         -- hide cmd
 opt.autoread = true       -- Automatically reread the file if a change was detected outside of vim
 opt.showmode = false      -- don't show mode indicator line
 opt.scrolloff = 3         -- scroll offset keep context around cursor
