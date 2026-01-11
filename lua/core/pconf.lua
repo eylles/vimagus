@@ -99,6 +99,11 @@ require('mini.comment').setup()
 ----------------
 require('mini.bracketed').setup()
 
+------------------
+-- command line --
+------------------
+require('mini.cmdline').setup()
+
 --------------------
 -- tmux navigator --
 --------------------
