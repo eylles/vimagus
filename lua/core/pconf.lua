@@ -94,6 +94,11 @@ require('mini.surround').setup()
 ----------------
 require('mini.comment').setup()
 
+---------------
+-- operators --
+---------------
+require('mini.operators').setup()
+
 ----------------
 -- unimpaired --
 ----------------
