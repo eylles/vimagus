@@ -1,35 +1,5 @@
 local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 
--- function to set autogroups easily
--- https://github.com/Th3Whit3Wolf/dots/blob/main/private_dot_config/private_nvim/private_lua/private_autocmd.lua
-local function augroups(definitions)
-  for group_name, definition in pairs(definitions) do
-    vim.api.nvim_command("augroup " .. group_name)
-    vim.api.nvim_command("autocmd!")
-    for _, def in ipairs(definition) do
-      local command = table.concat(vim.tbl_flatten({ "autocmd", def }), " ")
-      vim.api.nvim_command(command)
-    end
-    vim.api.nvim_command("augroup END")
-  end
-end
-
--- Define our autocommands
-local autocmds = {
-  --- Current window has hybrid numbers
-  --- All other windows have absolute numbers
-  numberToggleConditional = {
-    {
-      "BufEnter,FocusGained,InsertLeave", "*",
-      [[if &ft !~# 'dashboard' | set relativenumber | endif]]
-    },
-    {
-      "BufLeave,FocusLost,InsertEnter", "*",
-      [[if &ft !~# 'dashboard' | set norelativenumber | endif]]
-    },
-  },
-}
-augroups(autocmds)
 
 
 -----------------------------------------------------------
@@ -78,17 +48,6 @@ opt.swapfile = false
 opt.backup = false
 opt.undodir = os.getenv("HOME") .. "/.config/vim/undodir"
 opt.undofile = true
-
--- Remember last position in file
-vim.api.nvim_create_autocmd("BufReadPost", {
-    callback = function()
-        vim.cmd([[
-      if line("'\"") > 0 && line("'\"") <= line("$") |
-        exe "normal! g`\"" |
-      endif
-    ]])
-    end,
-})
 
 --vim.opt.hlsearch = false
 --vim.opt.incsearch = true
