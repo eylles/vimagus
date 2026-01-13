@@ -22,11 +22,11 @@ local autocmds = {
   --- All other windows have absolute numbers
   numberToggleConditional = {
     {
-      "BufEnter,FocusGained,InsertLeave", "*",
+      "BufEnter,FocusGained,InsertLeave,CmdlineLeave", "*",
       [[if &ft !~# 'dashboard' | set relativenumber | endif]]
     },
     {
-      "BufLeave,FocusLost,InsertEnter", "*",
+      "BufLeave,FocusLost,InsertEnter,CmdlineChanged,CmdlineEnter", "*",
       [[if &ft !~# 'dashboard' | set norelativenumber | endif]]
     },
   },

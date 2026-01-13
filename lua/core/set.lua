@@ -1,7 +1,5 @@
 local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 
-
-
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
@@ -20,10 +18,8 @@ opt.spell = true                              -- enable spellcheck
 opt.spelllang = {"en_us", "es"}               -- languages for spell checking
 
 opt.list = false          -- Show line number
-opt.number = true         -- Show line number
 opt.numberwidth = 2       -- number column width
 opt.signcolumn = 'yes'    -- always show the sign column
-opt.relativenumber = true -- Show line number
 opt.showmatch = true      -- Highlight matching parenthesis
 
 opt.cmdheight = 0         -- hide cmd
