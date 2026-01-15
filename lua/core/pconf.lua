@@ -115,6 +115,11 @@ require('mini.basics').setup( {
 --------------
 require('hlsearch').setup()
 
+-------------------
+-- notifications --
+-------------------
+require('mini.notify').setup()
+
 ----------------
 -- cursorword --
 ----------------
