@@ -110,6 +110,11 @@ require('mini.basics').setup( {
   silent = true,
 })
 
+------------------
+-- fuzzy search --
+------------------
+require('mini.fuzzy').setup()
+
 --------------
 -- hlsearch --
 --------------
