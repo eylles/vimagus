@@ -61,6 +61,8 @@ Plug('nvim-lua/plenary.nvim')
 Plug('MunifTanjim/nui.nvim')
 Plug('nvim-neo-tree/neo-tree.nvim', { ['branch'] = 'v3.x'})
 
+Plug('folke/noice.nvim')
+
 -- status line
 Plug('nvim-lualine/lualine.nvim')
 

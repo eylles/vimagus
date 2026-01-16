@@ -55,23 +55,6 @@ vim.api.nvim_create_autocmd({"VimEnter", "ColorScheme"}, {
   end
 })
 
--------------------------
--- auto resize cmdline --
--------------------------
-vim.api.nvim_create_autocmd({ 'CmdlineEnter', "CmdlineLeave" }, {
-  group = vim.api.nvim_create_augroup("cmdline-auto-hide", { clear = true }),
-  callback = function(args)
-    local target_height = args.event == 'CmdlineEnter' and 1 or 0
-    if vim.opt_local.cmdheight:get() ~= target_height then
-      if target_height > 1 then
-        target_height = target_height + 1
-      end
-      vim.opt_local.cmdheight = target_height
-      vim.cmd.redrawstatus()
-    end
-  end,
-})
-
 ------------------------------------
 -- Remember last position in file --
 ------------------------------------
