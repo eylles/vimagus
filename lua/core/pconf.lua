@@ -579,4 +579,25 @@ require('lualine').setup {
 ------------------
 -- start screen --
 ------------------
-require('mini.starter').setup()
+require('mini.starter').setup({
+  header = function()
+    local v = vim.version()
+    local finalimage = ""
+    local versionstring = string.format("               Neovim %d.%d.%d", v.major, v.minor, v.patch)
+    local image = [[
+┌───────────────────────────────────────────────────┐
+│                                                   │
+│  ▄    ▄   ▀    ▄    ▄                             │
+│  ▀▄  ▄▀ ▄▄▄    ██  ██  ▄▄▄    ▄▄▄▄  ▄   ▄   ▄▄▄   │
+│   █  █    █    █ ██ █ ▀   █  █▀ ▀█  █   █  █   ▀  │
+│   ▀▄▄▀    █    █ ▀▀ █ ▄▀▀▀█  █   █  █   █   ▀▀▀▄  │
+│    ██   ▄▄█▄▄  █    █ ▀▄▄▀█  ▀█▄▀█  ▀▄▄▀█  ▀▄▄▄▀  │
+│                               ▄  █                │
+│                                ▀▀                 │
+└───────────────────────────────────────────────────┘
+
+]]
+    finalimage = image .. versionstring
+    return finalimage
+  end
+})
