@@ -54,6 +54,44 @@ vim.keymap.set("n", "<Leader>l", require("lsp_lines").toggle, {desc = "toggle ls
 
 vim.keymap.set("n", "<Leader>M", "<Cmd>Magit<CR>", {desc = "Open Magit"})
 
+---------------------
+-- Indent controls --
+---------------------
+-- Reselect text after indent/unindent.
+vim.keymap.set("v", "<", "<gv", {silent = true, desc = "visual unindent"})
+vim.keymap.set("v", ">", ">gv", {silent = true, desc = "visual indent"})
+-- Tab to indent in visual mode.
+vim.keymap.set("v", "<Tab>", ">gv", {silent = true, desc = "visual indent"})
+-- Shift+Tab to unindent in visual mode.
+vim.keymap.set("v", "<S-Tab>", "<gv", {silent = true, desc = "visual unindent"})
+
+-- Replace all is aliased to S.
+vim.keymap.set("n", "S", ":%s//g<Left><Left>", {desc = "replace all"})
+
+------------------
+-- Text reorder --
+------------------
+vim.keymap.set("n", "<M-J>", ":m .+1<CR>==", {silent = true, desc = "normal move down"})
+vim.keymap.set("n", "<M-K>", ":m .-2<CR>==", {silent = true, desc = "normal move up"})
+vim.keymap.set("v", "<M-J>", ":m '>+1<CR>gv=gv", {silent = true, desc = "visual move down"})
+vim.keymap.set("v", "<M-K>", ":m '<-2<CR>gv=gv", {silent = true, desc = "visual move up"})
+vim.keymap.set("i", "<M-j>", "<Esc>:m .+1<CR>==gi", {silent = true, desc = "insert move down"})
+vim.keymap.set("i", "<M-k>", "<Esc>:m .-2<CR>==gi", {silent = true, desc = "insert move up"})
+
+-- Perform dot commands over visual blocks:
+vim.keymap.set("v", ".", ":normal .<CR>", {silent = true, desc = "visual dot command"})
+
+--------------------------
+-- Move between buffers --
+--------------------------
+-- Move to the next buffer
+vim.keymap.set("n", "<M-PageDown>", ":bnext<CR>", {silent = true, desc = "next buffer"})
+vim.keymap.set("n", "<Tab>", ":bnext<CR>", {silent = true, desc = "next buffer"})
+
+-- Move to the previous buffer
+vim.keymap.set("n", "<M-PageUp>", ":bprevious<CR>", {silent = true, desc = "previous buffer"})
+vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", {silent = true, desc = "previous buffer"})
+
 -- greatest remap
 -- copy over highlighted
 vim.keymap.set("x", "<leader>p", "\"_dp", { desc = "copy over highlighted"})
