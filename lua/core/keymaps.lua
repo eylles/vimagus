@@ -1,8 +1,5 @@
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, {desc = "Ex commands"})
 
---vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
---vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
 vim.keymap.set("n", "J", "mzJ`z", {desc = "Join line below"})
 -- vim.keymap.set('n', '<C-d>',
 --   [[<Cmd>lua vim.cmd('normal! <C-d>'); MiniAnimate.execute_after('scroll', 'normal! zvzz')<CR>]]
@@ -77,6 +74,8 @@ vim.keymap.set("v", "<M-J>", ":m '>+1<CR>gv=gv", {silent = true, desc = "visual 
 vim.keymap.set("v", "<M-K>", ":m '<-2<CR>gv=gv", {silent = true, desc = "visual move up"})
 vim.keymap.set("i", "<M-j>", "<Esc>:m .+1<CR>==gi", {silent = true, desc = "insert move down"})
 vim.keymap.set("i", "<M-k>", "<Esc>:m .-2<CR>==gi", {silent = true, desc = "insert move up"})
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {silent = true, desc = "visual move down"})
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {silent = true, desc = "visual move up"})
 
 -- Perform dot commands over visual blocks:
 vim.keymap.set("v", ".", ":normal .<CR>", {silent = true, desc = "visual dot command"})
