@@ -41,15 +41,15 @@ vim.keymap.set("n", "<leader>bq",
 )
 
 
-vim.keymap.set("n", "<leader>bt", "<Cmd>enew<cr>", {desc = "new Empty buffer"})
+vim.keymap.set("n", "<leader>bt", vim.cmd.enew, {desc = "new Empty buffer"})
 
 vim.keymap.set("n", "<leader>be", ":edit ", {desc = "edit file in new buffer"})
 
-vim.keymap.set("n", "<leader>bl", "<Cmd>ls<CR>", {desc = "show all buffers"})
+vim.keymap.set("n", "<leader>bl", vim.cmd.ls, {desc = "show all buffers"})
 
 vim.keymap.set("n", "<Leader>l", require("lsp_lines").toggle, {desc = "toggle lsp lines"})
 
-vim.keymap.set("n", "<Leader>M", "<Cmd>Magit<CR>", {desc = "Open Magit"})
+vim.keymap.set("n", "<Leader>M", vim.cmd.Magit, {remap = true, desc = "Open Magit"})
 
 ---------------------
 -- Indent controls --
@@ -84,12 +84,12 @@ vim.keymap.set("v", ".", ":normal .<CR>", {silent = true, desc = "visual dot com
 -- Move between buffers --
 --------------------------
 -- Move to the next buffer
-vim.keymap.set("n", "<M-PageDown>", ":bnext<CR>", {silent = true, desc = "next buffer"})
-vim.keymap.set("n", "<Tab>", ":bnext<CR>", {silent = true, desc = "next buffer"})
+vim.keymap.set("n", "<M-PageDown>", vim.cmd.bnext, {silent = true, desc = "next buffer"})
+vim.keymap.set("n", "<Tab>", vim.cmd.bnext, {silent = true, desc = "next buffer"})
 
 -- Move to the previous buffer
-vim.keymap.set("n", "<M-PageUp>", ":bprevious<CR>", {silent = true, desc = "previous buffer"})
-vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", {silent = true, desc = "previous buffer"})
+vim.keymap.set("n", "<M-PageUp>", vim.cmd.bprevious, {silent = true, desc = "previous buffer"})
+vim.keymap.set("n", "<S-Tab>", vim.cmd.bprevious, {silent = true, desc = "previous buffer"})
 
 -- greatest remap
 -- copy over highlighted
