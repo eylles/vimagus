@@ -118,6 +118,7 @@ miniclue.setup({
     -- Leader triggers
     { mode = 'n', keys = '<Leader>' },
     { mode = 'x', keys = '<Leader>' },
+    { mode = 'v', keys = '<Leader>' },
 
     -- Built-in completion
     { mode = 'i', keys = '<C-x>' },
@@ -144,6 +145,10 @@ miniclue.setup({
     -- `z` key
     { mode = 'n', keys = 'z' },
     { mode = 'x', keys = 'z' },
+
+    -- Bracketed
+    { mode = 'n', keys = '[' },
+    { mode = 'n', keys = ']' },
   },
 
   clues = {
