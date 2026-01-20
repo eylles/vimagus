@@ -21,6 +21,7 @@ opt.list = false          -- Show line number
 opt.numberwidth = 2       -- number column width
 opt.signcolumn = 'yes'    -- always show the sign column
 opt.showmatch = true      -- Highlight matching parenthesis
+opt.foldmethod = 'marker' -- Enable folding (default 'foldmarker')
 
 opt.cmdheight = 0         -- hide cmd
 opt.autoread = true       -- Automatically reread the file if a change was detected outside of vim
