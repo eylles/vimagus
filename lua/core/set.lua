@@ -28,7 +28,7 @@ opt.showmode = false      -- don't show mode indicator line
 opt.scrolloff = 3         -- scroll offset keep context around cursor
 opt.sidescrolloff = 3     -- scroll offset keep context around cursor
 opt.conceallevel = 0      -- don't automatically collapse markdown and latex
-opt.cursorline = true     -- enable different color for line number (or whole line) of current line
+opt.cursorline = false     -- enable different color for line number (or whole line) of current line
 opt.pumheight = 10        -- height of pop up menu
 
 opt.expandtab = true      -- Use spaces instead of tabs
