@@ -405,7 +405,7 @@ cmp.setup({
     {name = 'path'},
     {name = 'nvim_lsp'},
     {name = 'nvim_lua'},
-    {name = 'buffer', keyword_length = 3},
+    {name = 'buffer', option = { get_bufnrs = function() return vim.api.nvim_list_bufs() end }},
     {name = 'buffer-lines'},
     {name = 'nvim_lsp_signature_help'},
     {name = 'treesitter'},
