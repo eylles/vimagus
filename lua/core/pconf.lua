@@ -411,7 +411,7 @@ cmp.setup({
     {name = 'nvim_lsp_signature_help'},
     {name = 'treesitter'},
     {name = 'omni', option = { disable_omnifuncs = { 'v:lua.vim.lsp.omnifunc' }}},
-    {name = 'luasnip', keyword_length = 2},
+    {name = 'luasnip', option = { show_autosnippets = true }},
     {name = 'tmux', option = { all_panes = true, capture_history = true,}},
   },
   formatting = {
