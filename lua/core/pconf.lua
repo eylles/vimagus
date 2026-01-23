@@ -413,6 +413,7 @@ cmp.setup({
     {name = 'omni', option = { disable_omnifuncs = { 'v:lua.vim.lsp.omnifunc' }}},
     {name = 'luasnip', option = { show_autosnippets = true }},
     {name = 'tmux', option = { all_panes = true, capture_history = true,}},
+    {name = "dotenv"},
   },
   formatting = {
     fields = { 'abbr', 'icon', 'kind', 'menu' },
