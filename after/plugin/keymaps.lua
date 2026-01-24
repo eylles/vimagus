@@ -1,3 +1,7 @@
+-------------
+-- keymaps --
+-------------
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, {desc = "Ex commands"})
 
 vim.keymap.set("n", "J", "mzJ`z", {desc = "Join line below"})
@@ -110,63 +114,4 @@ vim.keymap.set(
 
 -- load vimscript defined keymaps
 
-vim.cmd('source ~/.config/nvim/lua/core/keymaps.vim')
-
-local miniclue = require('mini.clue')
-miniclue.setup({
-  triggers = {
-    -- Leader triggers
-    { mode = 'n', keys = '<Leader>' },
-    { mode = 'x', keys = '<Leader>' },
-    { mode = 'v', keys = '<Leader>' },
-
-    -- Built-in completion
-    { mode = 'i', keys = '<C-x>' },
-
-    -- `g` key
-    { mode = 'n', keys = 'g' },
-    { mode = 'x', keys = 'g' },
-
-    -- Marks
-    { mode = 'n', keys = "'" },
-    { mode = 'n', keys = '`' },
-    { mode = 'x', keys = "'" },
-    { mode = 'x', keys = '`' },
-
-    -- Registers
-    { mode = 'n', keys = '"' },
-    { mode = 'x', keys = '"' },
-    { mode = 'i', keys = '<C-r>' },
-    { mode = 'c', keys = '<C-r>' },
-
-    -- Window commands
-    { mode = 'n', keys = '<C-w>' },
-
-    -- `z` key
-    { mode = 'n', keys = 'z' },
-    { mode = 'x', keys = 'z' },
-
-    -- Bracketed
-    { mode = 'n', keys = '[' },
-    { mode = 'n', keys = ']' },
-  },
-
-  clues = {
-    -- Enhance this by adding descriptions for <Leader> mapping groups
-    { mode = 'n', keys = '<leader>b', desc = 'Buffers' },
-    miniclue.gen_clues.builtin_completion(),
-    miniclue.gen_clues.g(),
-    miniclue.gen_clues.marks(),
-    miniclue.gen_clues.registers(),
-    miniclue.gen_clues.windows(),
-    miniclue.gen_clues.z(),
-  },
-
-  window = {
-    -- Delay before showing clue window
-    delay = 700,
-    -- Keys to scroll inside the clue window
-    scroll_down = '<C-d>',
-    scroll_up = '<C-u>',
-  },
-})
+vim.cmd('source ~/.config/nvim/after/plugin/keymaps.vim')
