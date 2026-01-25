@@ -680,9 +680,10 @@ miniclue.setup({
 
   window = {
     -- Delay before showing clue window
-    delay = 700,
+    delay = 600,
     -- Keys to scroll inside the clue window
     scroll_down = '<C-d>',
     scroll_up = '<C-u>',
+    config = { width = 'auto', },
   },
 })
