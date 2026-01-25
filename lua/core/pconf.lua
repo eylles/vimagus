@@ -107,7 +107,7 @@ require('mini.basics').setup( {
   },
 
   -- Whether to disable showing non-error feedback
-  silent = true,
+  silent = false,
 })
 
 ------------------
