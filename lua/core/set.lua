@@ -3,7 +3,6 @@ local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
-opt.mouse = 'a'                               -- Enable mouse support
 opt.mousemoveevent = true
 opt.swapfile = false                          -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect' -- Autocomplete options
@@ -30,7 +29,6 @@ opt.scrolloff = 3         -- scroll offset keep context around cursor
 opt.sidescrolloff = 3     -- scroll offset keep context around cursor
 opt.conceallevel = 0      -- don't automatically collapse markdown and latex
 opt.cursorline = false     -- enable different color for line number (or whole line) of current line
-opt.pumheight = 10        -- height of pop up menu
 
 opt.expandtab = true      -- Use spaces instead of tabs
 opt.tabstop = 4           -- 1 tab == 4 spaces
@@ -42,7 +40,6 @@ opt.autoindent = true     -- match previous line indent when doinng O or o
 opt.wrap = true
 
 opt.swapfile = false
-opt.backup = false
 opt.undodir = os.getenv("HOME") .. "/.config/vim/undodir"
 opt.undofile = true
 
@@ -52,12 +49,8 @@ opt.undofile = true
 -----------------------------------------------------------
 -- ui
 -----------------------------------------------------------
-opt.termguicolors = true
-opt.splitright = true     -- Vertical split to the right
-opt.splitbelow = true     -- Horizontal split to the bottom
 opt.autoread = true       -- Automatically reread the file if a change was detected outside of vim
 opt.showmode = false      -- don't show mode indicator line
-opt.pumheight = 10        -- height of pop up menu
 
 opt.scrolloff = 5
 opt.signcolumn = "yes"
