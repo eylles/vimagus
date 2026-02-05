@@ -88,13 +88,13 @@ require('mini.basics').setup( {
 
     -- Prefix for mappings that toggle common options ('wrap', 'spell', ...).
     -- Supply empty string to not create these mappings.
-    option_toggle_prefix = [[\]],
+    option_toggle_prefix = [[<leader>\]],
 
     -- Window navigation with <C-hjkl>, resize with <C-arrow>
     windows = false,
 
     -- Move cursor in Insert, Command, and Terminal mode with <M-hjkl>
-    move_with_alt = false,
+    move_with_alt = true,
   },
 
   -- Autocommands. Set field to `false` to disable
