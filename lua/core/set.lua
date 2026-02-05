@@ -39,6 +39,8 @@ opt.autoindent = true     -- match previous line indent when doinng O or o
 
 opt.wrap = true
 
+opt.formatoptions:remove("1")
+
 opt.swapfile = false
 opt.undodir = os.getenv("HOME") .. "/.config/vim/undodir"
 opt.undofile = true
