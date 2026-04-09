@@ -49,6 +49,9 @@ Plug('jreybert/vimagit')
 -- risc v asm syntax
 Plug('henry-hsieh/riscv-asm-vim')
 
+-- rasi syntax
+Plug('Fymyte/rasi.vim')
+
 -- search highlight
 Plug('glepnir/hlsearch.nvim')
 
