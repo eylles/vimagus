@@ -496,12 +496,6 @@ require('neo-tree').setup({
 -----------
 -- files --
 -----------
-require('mini.files').setup({
-  mappings = {
-    show_help = 'gh',
-  },
-})
-
 require('mini.pick').setup()
 
 -------------
