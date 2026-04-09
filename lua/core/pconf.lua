@@ -188,7 +188,7 @@ require("noice").setup({
     view_error = "notify", -- view for errors
     view_warn = "notify", -- view for warnings
     view_history = "messages", -- view for :messages
-    view_search = "virtualtext", -- view for search count messages. Set to `false` to disable
+    view_search = "notify", -- view for search count messages. Set to `false` to disable
   },
   notify = {
     -- Noice can be used as `vim.notify` so you can route any notification like other messages
@@ -198,6 +198,23 @@ require("noice").setup({
     -- Benefit of using Noice for this is the routing and consistent history view
     enabled = true,
     view = "notify",
+  },
+  popupmenu = {
+    enabled = true, -- enables the Noice popupmenu UI
+    ---@type 'nui'|'cmp'
+    backend = "nui", -- backend to use to show regular cmdline completions
+    ---@type NoicePopupmenuItemKind|false
+    -- Icons for completion item kinds (see defaults at noice.config.icons.kinds)
+    kind_icons = {}, -- set to `false` to disable icons
+  },
+  -- default options for require('noice').redirect
+  -- see the section on Command Redirection
+  ---@type NoiceRouteConfig
+  redirect = {
+    view = "popup",
+    filter = {
+      event = "msg_show",
+    },
   },
   lsp = {
     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
@@ -215,6 +232,37 @@ require("noice").setup({
     inc_rename = false, -- enables an input dialog for inc-rename.nvim
     lsp_doc_border = true, -- add a border to hover docs and signature help
   },
+  views = {
+    notify = {
+      backend = "notify",
+      replace = true,
+      merge = true,
+    },
+  },
+  routes = {
+    {
+      view = "notify",
+      filter = { event = "msg_showmode" },
+    },
+    {
+      view = 'notify',
+      filter = {
+        event = 'msg_showcmd',
+        any = {
+          { find = '[mq]$' }
+        },
+      },
+    },
+    {
+      view = 'notify',
+      filter = {
+        event = 'msg_showmode',
+        any = {
+          { find = 'recording' },
+        },
+      },
+    },
+  }
 })
 
 --------------------
