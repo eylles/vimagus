@@ -2,6 +2,8 @@
 -- keymaps --
 -------------
 
+vim.keymap.set('n', '<leader>W', '<cmd>write<cr>', {desc = 'Save file'})
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, {desc = "Ex commands"})
 
 vim.keymap.set("n", "J", "mzJ`z", {desc = "Join line below"})
@@ -9,6 +11,13 @@ vim.keymap.set("n", "J", "mzJ`z", {desc = "Join line below"})
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, {desc = "toggle undotree"})
 
 vim.keymap.set("n", "<leader>n", '<Cmd>Neotree toggle<CR>', {desc = "toggle neotree"})
+
+---------------
+-- mini pick --
+---------------
+vim.keymap.set('n', '<leader><space>', '<cmd>Pick buffers<cr>', {desc = 'Search open files'})
+vim.keymap.set('n', '<leader>ff', '<cmd>Pick files<cr>', {desc = 'Search all files'})
+vim.keymap.set('n', '<leader>fh', '<cmd>Pick help<cr>', {desc = 'Search help tags'})
 
 -- close buffer
 -- yes this is stolen from lazyvim
