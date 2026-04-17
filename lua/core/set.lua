@@ -5,7 +5,7 @@ local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 -----------------------------------------------------------
 opt.mousemoveevent = true
 opt.swapfile = false                          -- Don't use swapfile
-opt.completeopt = 'menuone,noinsert,noselect' -- Autocomplete options
+opt.completeopt = {'menu', 'menuone', 'noselect'} -- this is how cmp wants these settings to be
 opt.hlsearch = true                           -- highlight search results
 opt.incsearch = true                          -- highlight search results
 opt.ignorecase = true                         -- Ignore case letters when search

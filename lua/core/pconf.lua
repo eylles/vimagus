@@ -322,7 +322,8 @@ require('mason-lspconfig').setup({
 ----------------
 local lspkind = require('lspkind')
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
+local luasnip = require('luasnip')
+local cmp_action = lsp_zero.cmp_action()
 
 cmp.setup({
   window = {
@@ -331,8 +332,20 @@ cmp.setup({
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-Space>'] = cmp.mapping.complete(),
-    ['<C-f>']   = cmp_action.luasnip_jump_forward(),
-    ['<C-b>']   = cmp_action.luasnip_jump_backward(),
+    ['<C-f>'] = cmp.mapping(function(fallback)
+        if luasnip.jumpable(1) then
+          luasnip.jump(1)
+        else
+          fallback()
+        end
+      end, {'i', 's'}),
+    ['<C-b>'] = cmp.mapping(function(fallback)
+        if luasnip.jumpable(-1) then
+          luasnip.jump(-1)
+        else
+          fallback()
+        end
+      end, {'i', 's'}),
     ['<C-u>']   = cmp.mapping.scroll_docs(-4),
     ['<C-d>']   = cmp.mapping.scroll_docs(4),
     ['<CR>'] = cmp.mapping.confirm({select = false}),
