@@ -68,3 +68,11 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     end,
 })
 
+--------------------
+-- treat files as --
+--------------------
+vim.filetype.add({
+  pattern = {
+    ['*vifmrc'] = 'vim',
+  },
+})
