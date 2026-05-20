@@ -50,7 +50,7 @@ require('smartyank').setup({
     enabled = true,
     -- escseq = 'tmux',     -- use tmux escape sequence, only enable if
                             -- you're using tmux and have issues (see #4)
-    ssh_only = true,        -- false to OSC52 yank also in local sessions
+    ssh_only = false,        -- false to OSC52 yank also in local sessions
     silent = false,         -- true to disable the "n chars copied" echo
     echo_hl = "Directory",  -- highlight group of the OSC52 echo message
   },
@@ -433,7 +433,7 @@ require("noice").setup({
     view_error = "notify", -- view for errors
     view_warn = "notify", -- view for warnings
     view_history = "messages", -- view for :messages
-    view_search = "notify", -- view for search count messages. Set to `false` to disable
+    view_search = "mini", -- view for search count messages. Set to `false` to disable
   },
   notify = {
     -- Noice can be used as `vim.notify` so you can route any notification like other messages
